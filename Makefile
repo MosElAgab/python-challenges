@@ -52,7 +52,8 @@ test-all:
 run-flake:
 	$(call execute_in_env, flake8 \
 	./src/alphabet_position/*.py \
-	./src/bubble_sort/*.py )
+	./src/bubble_sort/*.py \
+	./test/*.py )
 
 ## Run all checks
-run-checks: run-flake test-all
+run-checks: test-all run-flake
